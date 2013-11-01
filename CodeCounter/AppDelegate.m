@@ -27,6 +27,7 @@
 @synthesize cb_cpp;
 @synthesize cb_hpp;
 @synthesize cb_java;
+@synthesize cb_xml;
 @synthesize isAllSelected;
 
 #pragma mark -
@@ -84,6 +85,7 @@
     [cb_java setState:isAllSelected];
     [cb_m setState:isAllSelected];
     [cb_mm setState:isAllSelected];
+    [cb_xml setState:isAllSelected];
     
 }
 
@@ -113,7 +115,7 @@
 
 - (BOOL)checkFileType:(NSString *)path
 {
-    NSString *extensionName = [path pathExtension];
+    NSString *extensionName = [[path pathExtension] lowercaseString];
     NSLog(@"后缀名%@", extensionName);
     if (self.cb_h.state == NSOnState && [extensionName isEqualToString:@"h"])
         return YES;
@@ -130,6 +132,8 @@
     if (self.cb_hpp.state == NSOnState && [extensionName isEqualToString:@"hpp"])
         return YES;
     if (self.cb_java.state == NSOnState && [extensionName isEqualToString:@"java"])
+        return YES;
+    if (self.cb_xml.state == NSOnState && [extensionName isEqualToString:@"xml"])
         return YES;
     return NO;
 }

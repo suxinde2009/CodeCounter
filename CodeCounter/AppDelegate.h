@@ -22,6 +22,7 @@
 @property (assign) IBOutlet NSButton    *cb_cpp;
 @property (assign) IBOutlet NSButton    *cb_hpp;
 @property (assign) IBOutlet NSButton    *cb_java;
+@property (assign) IBOutlet NSButton    *cb_xml;
 
 - (IBAction)selectAllAction:(id)sender;
 - (IBAction)getCodeLineNum:(id)sender;
