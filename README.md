@@ -1,14 +1,14 @@
-CodeCounter
+# CodeCounter
 ===========
 
-#Description
+# Description
 
 This is a tool that can help you to count how many lines of code in your project.
 ![image1](https://raw.github.com/suxinde2009/CodeCounter/master/Screen_Shot_01.png)
 
 ![image2](https://raw.github.com/suxinde2009/CodeCounter/master/Screen_Shot_02.png)
 
-#License
+# License
 The MIT License (MIT)
 
 Copyright (c) 2011-2021 suxinde (suxinde2009@126.com)
