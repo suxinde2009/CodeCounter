@@ -53,17 +53,17 @@
     if (fp == NULL)
         return -1;
     
-    while ((c = fgetc(fp)) != EOF) {
-        if (c == '\n')
-        {
-            h++;
-        } else {
-            c = fgetc(fp);//这里处理最后一行可能没有换行标记
-            if (c == EOF){
+    if (feof(fp)) { //跳过空文件
+        h = 0;
+    }
+    else {
+        while ((c = fgetc(fp))) { //循环读取文件字符
+            if (c == '\n') {
                 h++;
-                break;
-            } else if (c == '\n') {
+            }
+            else if (c == EOF) {
                 h++;
+                break; //文件结尾
             }
         }
     }
